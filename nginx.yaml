@@ -1,0 +1,13 @@
+---
+hosts: all
+become: true
+tasks:
+  yum:
+    name= install nginx server
+    state= present
+  service:
+    name= nginx started
+    enabled= yes
+    state= started
+  become: true
+
